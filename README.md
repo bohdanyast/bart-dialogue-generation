@@ -1,5 +1,7 @@
 # BART for Task-Oriented Dialogue Generation
 
+[![Open in Kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://www.kaggle.com/code/bodyastar/bart-dialogue-generation)
+
 ## Overview
 
 This project fine-tunes the pretrained `facebook/bart-base` model to generate responses in task-oriented service dialogues. The dataset contains conversations related to finding service providers and scheduling appointments.
@@ -27,6 +29,11 @@ The dataset is loaded from a JSON file containing dialogue turns. Each training 
 
 ## Setup
 
+**Option 1: Run on Kaggle (recommended).** Open the [Kaggle notebook](https://www.kaggle.com/code/bodyastar/bart-dialogue-generation). The dataset and a GPU are already available there, so no changes to `DATA_PATH` are needed.
+
+**Option 2: Run locally.** Install the required packages:
+
+...
 Install the required packages:
 
 ```bash
