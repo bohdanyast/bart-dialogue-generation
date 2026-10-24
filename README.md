@@ -23,23 +23,26 @@ The project demonstrates a complete sequence-to-sequence NLP pipeline, including
 
 The dataset is loaded from a JSON file containing dialogue turns. Each training example consists of a conversation context and the corresponding system response.
 
-**Dataset source:** [Add the original dataset URL or repository here.]
+**Dataset source:** [Schema-Guided Dialogue (SGD)](https://github.com/google-research-datasets/dstc8-schema-guided-dialogue) by Google Research. This project uses a subset of 125 dialogues from the `Services_1` (salons) and `Services_2` (dentists) services.
 
-**License:** [Add the dataset license after verifying its terms.]
+> Rastogi, A., Zang, X., Sunkara, S., Gupta, R., Khaitan, P. *Towards Scalable Multi-Domain Conversational Agents: The Schema-Guided Dialogue Dataset.* arXiv:1909.05855.
+
+**License:** The dataset is released under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). The dataset file is not redistributed in this repository; please download it from the source above.
 
 ## Setup
 
-**Option 1: Run on Kaggle (recommended).** Open the [Kaggle notebook](https://www.kaggle.com/code/bodyastar/bart-dialogue-generation). The dataset and a GPU are already available there, so no changes to `DATA_PATH` are needed.
+**Option 1: Run on Kaggle (recommended).** Open the [Kaggle notebook](https://www.kaggle.com/code/bodyastar/bart-dialogue-generation) and enable a GPU accelerator in the notebook settings. The dataset is already attached, so no path changes are needed.
 
-**Option 2: Run locally.** Install the required packages:
+**Option 2: Run locally.**
 
-...
-Install the required packages:
+1. Download the dialogue data from the source listed in the Dataset section.
+2. Install the required packages:
 
-```bash
-pip install torch transformers scikit-learn pandas numpy matplotlib evaluate sacrebleu rouge_score
-```
+   ```bash
+   pip install torch transformers scikit-learn pandas numpy matplotlib evaluate sacrebleu rouge_score
+   ```
 
+3. In the notebook, update `DATA_PATH`, `CHECKPOINT_DIR` and `OUTPUT_DIR`, which point to Kaggle directories by default.
 Update the dataset path (`DATA_PATH`) in the notebook before running the experiment.
 
 ## Running the experiment
@@ -100,3 +103,7 @@ Exact reproducibility may still depend on library versions, hardware, and GPU ex
 - Compare BART with a baseline model.
 - Add factual consistency and task-completion evaluation.
 - Integrate a verified provider database for real-world use.
+
+## License
+
+The code in this repository is released under the MIT License (see `LICENSE`). The dataset is not part of this repository and remains under CC BY-SA 4.0 (see the Dataset section).
