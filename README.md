@@ -77,10 +77,10 @@ Training ran for all 10 epochs (early stopping was not triggered). Training loss
 
 ### Key findings
 
-- The model learns the surface structure of system responses and copies slot values such as the city name from the user's request.
-- It frequently over-produces the "Please confirm the following details..." template in places where the reference asks for a missing slot (date, time) or reports a completed booking.
-- It sometimes ignores information that is already in the context (for example, asking for the city after the user named it).
-- It can hallucinate provider names, addresses and phone numbers that do not appear in the input.
+- The model learns the surface structure of system responses and often copies slot values, such as the city, from the user's request.
+- It over-produces the "Please confirm the following details..." template: 15.9% of test predictions, against 2.0% of training outputs. In 10 of these 18 cases the reference is not a confirmation request, because a required slot is missing or the user has already confirmed.
+- It sometimes ignores information already in the context (for example, asking for the city in 3 of 8 cases where the user had named it) and closes the conversation too early.
+- It produces provider names, phone numbers and addresses that are not in the input: 26.5% of predictions name a frequent provider absent from the context, and all 8 unsupported phone numbers end in the same digits, which points to memorization from training data.
 
 ## Limitations
 
