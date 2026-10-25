@@ -67,8 +67,8 @@ The dataset yields 1,123 context-response examples from 125 dialogues. Splitting
 
 | Metric | Value |
 |---|---|
-| BLEU (SacreBLEU, test) | 12.84 |
-| ROUGE-L (test) | 0.3196 |
+| BLEU (SacreBLEU, test) | 12.83 |
+| ROUGE-L (test) | 0.319 |
 | Test loss | 1.9633 |
 | Best validation loss (epoch 8) | 2.2478 |
 | Exact match with reference (test) | 1.77% (2 of 113) |
