@@ -39,11 +39,10 @@ The dataset is loaded from a JSON file containing dialogue turns. Each training 
 2. Install the required packages:
 
    ```bash
-   pip install torch transformers scikit-learn pandas numpy matplotlib evaluate sacrebleu rouge_score
+   pip install -r requirements.txt
    ```
 
 3. In the notebook, update `DATA_PATH`, `CHECKPOINT_DIR` and `OUTPUT_DIR`, which point to Kaggle directories by default.
-Update the dataset path (`DATA_PATH`) in the notebook before running the experiment.
 
 ## Running the experiment
 
